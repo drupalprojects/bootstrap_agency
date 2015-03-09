@@ -273,6 +273,7 @@ header#page-header .region .block-title {
   font-size: 22px;
   line-height: 22px;
   margin-bottom: 25px;
+  text-transform: none;
 }
 header#page-header .region .content {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -306,15 +307,15 @@ div.region-content section,
 section.agency-contact {
   padding: 100px 0;
 }
-div.region-content section h2.block-title,
-section.agency-contact h2.block-title {
+div.region-content section .block-title,
+section.agency-contact .block-title {
   font-size: 40px;
   margin-top: 0;
   margin-bottom: 15px;
   text-align: center;
 }
-div.region-content section h3.section-subheading,
-section.agency-contact h3.section-subheading {
+div.region-content section .section-subheading,
+section.agency-contact .section-subheading {
   font-size: 16px;
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: none;
