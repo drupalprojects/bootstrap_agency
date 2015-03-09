@@ -69,6 +69,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
+section.agency-contact button,
 .btn-xl {
     .button-variant(white; @brand-primary; @brand-primary);
     .heading-font;
@@ -177,37 +178,41 @@ header#page-header {
     .background-cover;
     text-align: center;
     color: white;
-    .intro-text {
+    .region {
         padding-top: 100px;
         padding-bottom: 50px;
-        .intro-lead-in {
+        .block-title {
             .serif-font;
             font-style: italic;
             font-size: 22px;
             line-height: 22px;
             margin-bottom: 25px;
+            text-transform: none;
         }
-        .intro-heading {
+        .content {
             .heading-font;
             font-weight: 700;
             font-size: 50px;
             line-height: 50px;
             margin-bottom: 25px;
         }
+        .btn {
+            margin-top: 25px;
+        }
     }
 }
 
 @media(min-width:768px) {
     header#page-header {
-        .intro-text {
-            .intro-lead-in {
+        .region {
+            .block-title {
                 .serif-font;
                 font-style: italic;
                 font-size: 40px;
                 line-height: 40px;
                 margin-bottom: 25px;
             }
-            .intro-heading {
+            .content {
                 .heading-font;
                 font-weight: 700;
                 font-size: 75px;
@@ -223,13 +228,13 @@ header#page-header {
 div.region-content section,
 section.agency-contact {
     padding: 100px 0;
-    h2.block-title {
+    .block-title {
         font-size: 40px;
         margin-top: 0;
         margin-bottom: 15px;
         text-align: center;
     }
-    h3.section-subheading {
+    .section-subheading {
         font-size: 16px;
         .serif-font;
         text-transform: none;

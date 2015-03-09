@@ -10,7 +10,7 @@ settings[bootstrap_navbar_position] = 'fixed-top'
 ;;;;;;;;;;;;;;;;;;;;;
 
 regions[navigation]     = 'Navigation'
-regions[header]         = 'Top Bar'
+regions[header]         = 'Page splash'
 regions[highlighted]    = 'Highlighted'
 regions[help]           = 'Help'
 regions[content]        = 'Content'
