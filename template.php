@@ -43,8 +43,8 @@ function bootstrap_agency_preprocess_block(&$variables) {
   // Create css id attribute based on the block's administrative name
   if ($block->module == 'block') {
     $custom = block_custom_block_get($block->delta);
-    
-    $id = strtolower($custom['info']);
+
+    $id = drupal_clean_css_identifier(drupal_strtolower($custom['info']));
     $variables['block_html_id'] = $id;
   }
 }
