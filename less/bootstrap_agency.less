@@ -171,10 +171,7 @@ section.agency-contact button,
 }
 
 header#page-header {
-    background-image: url('../img/header-bg.jpg');
-    background-repeat: none;
-    background-attachment: scroll;
-    background-position: center center;
+    background: url('../img/header-bg.jpg') no-repeat center center;
     .background-cover;
     text-align: center;
     color: white;
@@ -544,10 +541,7 @@ aside.clients {
 // Contact Section
 
 section.agency-contact {
-    background-color: @gray-darkest;
-    background-image: url('../img/map-image.png');
-    background-position: center;
-    background-repeat: no-repeat;
+    background: @gray-darkest url('../img/map-image.png') no-repeat center center;
     text-align: center;
     .block-title {
         color: white;
@@ -768,5 +762,5 @@ img::-moz-selection {
 }
 
 body {
-    webkit-tap-highlight-color: @brand-primary;
+    -webkit-tap-highlight-color: @brand-primary;
 }

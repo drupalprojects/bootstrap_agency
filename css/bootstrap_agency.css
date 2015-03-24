@@ -252,10 +252,7 @@ section.agency-contact button .badge,
   }
 }
 header#page-header {
-  background-image: url('../img/header-bg.jpg');
-  background-repeat: none;
-  background-attachment: scroll;
-  background-position: center center;
+  background: url('../img/header-bg.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -585,10 +582,7 @@ aside.clients img {
   margin: 50px auto;
 }
 section.agency-contact {
-  background-color: #222222;
-  background-image: url('../img/map-image.png');
-  background-position: center;
-  background-repeat: no-repeat;
+  background: #222222 url('../img/map-image.png') no-repeat center center;
   text-align: center;
 }
 section.agency-contact .block-title {
@@ -794,5 +788,5 @@ img::-moz-selection {
   background: transparent;
 }
 body {
-  webkit-tap-highlight-color: #fed136;
+  -webkit-tap-highlight-color: #fed136;
 }

@@ -77,13 +77,13 @@
   <div class="container">
     <div class="navbar-header">
       <?php if ($logo): ?>
-      <a class="logo navbar-btn pull-left" href="<?php print drupal_is_front_page() ? '#' : $front_page; ?>" title="<?php print t('Home'); ?>">
+      <a class="logo navbar-btn pull-left" href="<?php print (drupal_is_front_page() ? '#' : $front_page); ?>" title="<?php print t('Home'); ?>">
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
       <?php endif; ?>
 
       <?php if (!empty($site_name)): ?>
-      <a class="name navbar-brand" href="<?php print drupal_is_front_page() ? '#' : $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+      <a class="name navbar-brand" href="<?php print (drupal_is_front_page() ? '#' : $front_page); ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
       <?php endif; ?>
       <?php if (!empty($site_slogan)): ?>
         <p class="lead"><?php print $site_slogan; ?></p>
