@@ -44,8 +44,7 @@ function bootstrap_agency_preprocess_block(&$variables) {
   if ($block->module == 'block') {
     $custom = block_custom_block_get($block->delta);
 
-    $id = drupal_clean_css_identifier(drupal_strtolower($custom['info']));
-    $variables['block_html_id'] = $id;
+    $variables['block_html_id'] = drupal_html_id($custom['info']);
   }
 }
 
