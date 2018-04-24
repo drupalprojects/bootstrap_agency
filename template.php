@@ -49,20 +49,6 @@ function bootstrap_agency_preprocess_block(&$variables) {
 }
 
 /**
- * Implements hook_js_alter().
- */
-function bootstrap_agency_js_alter(&$js) {
-  // This code is only necessary because of [#2162165]
-  // Always add bootstrap.js last.
-  unset($js[drupal_get_path('theme', 'bootstrap') . '/js/bootstrap.js']);
-  $theme_path = drupal_get_path('theme', 'bootstrap_agency');
-  $bootstrap = $theme_path . '/js/bootstrap.js';
-  $js[$bootstrap] = drupal_js_defaults($bootstrap);
-  $js[$bootstrap]['group'] = JS_THEME;
-  $js[$bootstrap]['scope'] = 'footer';
-}
-
-/**
  * Implements theme_textarea().
  */
 function bootstrap_agency_textarea($element) {

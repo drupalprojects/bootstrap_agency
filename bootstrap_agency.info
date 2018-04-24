@@ -35,8 +35,6 @@ stylesheets[all][] = css/bootstrap_agency.min.css
 ;; Scripts
 ;;;;;;;;;;;;;;;;;;;;;
 scripts[] = js/bootstrap_agency.js
-;; include a modified version of bootstrap.js because of [#2162165]
-scripts[] = js/bootstrap.js
 
 fonts[google_fonts_api][] = "Droid Serif&subset=latin#700"
 fonts[google_fonts_api][] = "Droid Serif&subset=latin#700italic"
