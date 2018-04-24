@@ -1,3 +1,13 @@
+body.admin-menu.navbar-is-fixed-top {
+  padding-top: 0;
+}
+body.admin-menu .navbar-fixed-top {
+  margin-top: 29px;
+  top: 0;
+}
+#admin-menu-search .control-label {
+  display: none;
+}
 body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -45,7 +55,7 @@ h6 {
   margin: 0 auto;
 }
 .bg-light-gray {
-  background-color: #f7f7f7;
+  background-color: #eeeeee;
 }
 .bg-darkest-gray {
   background-color: #222222;
@@ -186,9 +196,10 @@ section.agency-contact button .badge,
 .navbar .navbar-toggle {
   background-color: #fed136;
   border-color: #fed136;
-}
-.navbar .navbar-toggle .icon-bar {
-  background-color: white;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  font-size: 12px;
 }
 .navbar .navbar-toggle:hover,
 .navbar .navbar-toggle:focus {
@@ -210,13 +221,14 @@ section.agency-contact button .badge,
   outline: none;
 }
 .navbar .navbar-nav > .active > a {
+  border-radius: 0;
   color: white;
-  background-color: transparent;
+  background-color: #fed136;
 }
 .navbar .navbar-nav > .active > a:hover,
 .navbar .navbar-nav > .active > a:focus {
-  color: #fed136;
-  background-color: transparent;
+  color: white;
+  background-color: #fec503;
 }
 @media (min-width: 768px) {
   .navbar {
@@ -233,22 +245,19 @@ section.agency-contact button .badge,
     -moz-transition: all 0.3s;
     transition: all 0.3s;
   }
-  .navbar.navbar-shrink {
+  .navbar .navbar-nav > .active > a {
+    border-radius: 3px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar.navbar-shrink,
+  .navbar.affix {
     background-color: #222222;
     padding: 10px 0;
   }
-  .navbar.navbar-shrink .navbar-brand {
+  .navbar.navbar-shrink .navbar-brand,
+  .navbar.affix .navbar-brand {
     font-size: 1.5em;
-  }
-  .navbar.navbar-shrink .navbar-nav > .active > a {
-    border-radius: 3px;
-    color: white;
-    background-color: #fed136;
-  }
-  .navbar.navbar-shrink .navbar-nav > .active > a:hover,
-  .navbar.navbar-shrink .navbar-nav > .active > a:focus {
-    color: white;
-    background-color: #fec503;
   }
 }
 header#page-header {
@@ -260,19 +269,25 @@ header#page-header {
   text-align: center;
   color: white;
 }
-header#page-header .region {
+header#page-header .region,
+header#page-header .intro-text {
   padding-top: 100px;
   padding-bottom: 50px;
 }
-header#page-header .region .block-title {
+header#page-header .region .block-title,
+header#page-header .intro-text .block-title,
+header#page-header .region .intro-lead-in,
+header#page-header .intro-text .intro-lead-in {
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 22px;
   line-height: 22px;
   margin-bottom: 25px;
-  text-transform: none;
 }
-header#page-header .region .content {
+header#page-header .region .content,
+header#page-header .intro-text .content,
+header#page-header .region .intro-heading,
+header#page-header .intro-text .intro-heading {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -280,18 +295,26 @@ header#page-header .region .content {
   line-height: 50px;
   margin-bottom: 25px;
 }
-header#page-header .region .btn {
-  margin-top: 25px;
-}
 @media (min-width: 768px) {
-  header#page-header .region .block-title {
+  header .region,
+  header .intro-text {
+    padding-top: 300px;
+    padding-bottom: 200px;
+  }
+  header .region .block-title,
+  header .intro-text .block-title,
+  header .region .intro-lead-in,
+  header .intro-text .intro-lead-in {
     font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: italic;
     font-size: 40px;
     line-height: 40px;
     margin-bottom: 25px;
   }
-  header#page-header .region .content {
+  header .region .content,
+  header .intro-text .content,
+  header .region .intro-heading,
+  header .intro-text .intro-heading {
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 700;
@@ -305,14 +328,16 @@ section.agency-contact {
   padding: 100px 0;
 }
 div.region-content section .block-title,
-section.agency-contact .block-title {
+section.agency-contact .block-title,
+div.region-content section h2.section-heading,
+section.agency-contact h2.section-heading {
   font-size: 40px;
   margin-top: 0;
   margin-bottom: 15px;
   text-align: center;
 }
-div.region-content section .section-subheading,
-section.agency-contact .section-subheading {
+div.region-content section h3.section-subheading,
+section.agency-contact h3.section-subheading {
   font-size: 16px;
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: none;
@@ -581,67 +606,70 @@ section.agency-contact .section-subheading {
 aside.clients img {
   margin: 50px auto;
 }
-section.agency-contact {
+section#contact {
   background: #222222 url('../img/map-image.png') no-repeat center center;
+}
+section#contact .block-title,
+section#contact .section-heading {
+  color: white;
   text-align: center;
 }
-section.agency-contact .block-title {
-  color: white;
-}
-section.agency-contact .form-group {
+section#contact .form-group {
   margin-bottom: 5px;
-  text-align: left;
 }
-section.agency-contact .form-group label {
+section#contact .form-group label {
   color: white;
 }
-section.agency-contact .form-group input,
-section.agency-contact .form-group textarea {
+section#contact .form-group input,
+section#contact .form-group textarea {
   padding: 20px;
 }
-section.agency-contact .form-group input.form-control {
+section#contact .form-group input.form-control {
   height: auto;
 }
-section.agency-contact .form-group textarea.form-control {
+section#contact .form-group textarea.form-control {
   height: 246px;
 }
-section.agency-contact .form-control:focus {
+section#contact .form-actions {
+  text-align: center;
+}
+section#contact .form-control:focus {
   border-color: #fed136;
   box-shadow: none;
 }
-section.agency-contact ::-webkit-input-placeholder {
+section#contact ::-webkit-input-placeholder {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  color: #bbbbbb;
+  color: #eeeeee;
 }
-section.agency-contact :-moz-placeholder {
+section#contact :-moz-placeholder {
   /* Firefox 18- */
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  color: #bbbbbb;
+  color: #eeeeee;
 }
-section.agency-contact ::-moz-placeholder {
+section#contact ::-moz-placeholder {
   /* Firefox 19+ */
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  color: #bbbbbb;
+  color: #eeeeee;
 }
-section.agency-contact :-ms-input-placeholder {
+section#contact :-ms-input-placeholder {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  color: #bbbbbb;
+  color: #eeeeee;
 }
-section.agency-contact .text-danger {
+section#contact .text-danger {
   color: #e74c3c;
 }
-section.agency-contact .form-item-copy {
+section#contact .form-item-copy {
   display: none;
 }
-section.agency-contact button#edit-submit {
+section#contact button#edit-submit {
   margin-top: 20px;
 }
 @media (min-width: 992px) {
@@ -664,17 +692,24 @@ section.agency-contact button#edit-submit {
 footer {
   padding: 25px 0;
   text-align: center;
-  margin-top: 0 !important;
+}
+footer.footer {
+  border: 0;
+  margin-top: 0;
+  padding: 25px 0;
+}
+footer span.copyright {
+  line-height: 40px;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-}
-footer p,
-footer span {
-  line-height: 40px;
+  text-transform: none;
 }
 footer ul.quicklinks {
   margin-bottom: 0;
   line-height: 40px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-transform: none;
 }
 ul.social-buttons {
   margin-bottom: 0;
@@ -703,6 +738,11 @@ ul.social-buttons li a:active {
 .btn.active,
 .btn:active:focus {
   outline: none;
+}
+.portfolio-modal .modal-dialog {
+  margin: 0;
+  height: 100%;
+  width: auto;
 }
 .portfolio-modal .modal-content {
   border-radius: 0;
