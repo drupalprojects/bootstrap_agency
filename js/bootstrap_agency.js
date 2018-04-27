@@ -12,7 +12,7 @@
       });
 
       // Hide the responsive menu when clicking in a menu item.
-      $('#navbar').find('.navbar-collapse ul li a').click(function() {
+      $('#navbar').find('.navbar-collapse ul li:not(.dropdown) a').click(function() {
           $('#navbar button.navbar-toggle:visible').click();
       });
     }
