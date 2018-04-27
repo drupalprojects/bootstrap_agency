@@ -1,5 +1,11 @@
-body.admin-menu.navbar-is-fixed-top {
-  padding-top: 0;
+body.admin-menu.navbar-is-fixed-top,
+body.toolbar-drawer.navbar-is-fixed-top,
+body.navbar-is-fixed-top {
+  padding-top: 0 !important;
+}
+.navbar.container,
+.navbar.container-fluid {
+  margin-top: 0;
 }
 body.admin-menu .navbar-fixed-top {
   margin-top: 29px;
@@ -262,6 +268,7 @@ section.agency-contact button .badge,
 }
 header#page-header {
   background: url('../img/header-bg.jpg') no-repeat center center;
+  min-height: 300px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;

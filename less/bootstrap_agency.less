@@ -1,8 +1,15 @@
 @import "bootstrap_agency_variables.less";
 @import "bootstrap_agency_mixins.less";
 
-body.admin-menu.navbar-is-fixed-top {
-    padding-top: 0;
+body.admin-menu.navbar-is-fixed-top,
+body.toolbar-drawer.navbar-is-fixed-top,
+body.navbar-is-fixed-top {
+    padding-top: 0 !important;
+}
+
+.navbar.container,
+.navbar.container-fluid {
+    margin-top: 0;
 }
 
 body.admin-menu .navbar-fixed-top {
@@ -185,6 +192,7 @@ section.agency-contact button,
 
 header#page-header {
     background: url('../img/header-bg.jpg') no-repeat center center;
+    min-height: 300px;
     .background-cover;
     text-align: center;
     color: white;
